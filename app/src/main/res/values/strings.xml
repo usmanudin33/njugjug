@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">njugjug</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="logo">TODO</string>
+    <string name="halo">halo</string>
+    <string name="a">A</string>
+    <string name="pertumbuhan">pertumbuhan</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="njugjug">Njugjug</string>
+    <string name="selamat_datang">Selamat datang</string>
+    <string name="input_data">input data</string>
+    <string name="total_tanam">1000 kg</string>
+    <string name="tanggal_tanam">10/10/2023</string>
+    <string name="simpan">Simpan</string>
+    <string name="pilih_jenis">Pilih Jenis...</string>
+    <string name="input_bibit_baru">TANAM APA SEKARANG.?</string>
+    <string name="jenis_bibit">Jenis Bibit</string>
+    <string name="banyaknya_bibit_dalam_kg">Banyaknya Bibit dalam Kg</string>
+</resources>
