@@ -98,6 +98,13 @@ class MainActivity : ComponentActivity() {
 
         // Inisialisasi layanan lokasi
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+        // TODO: Consider calling
+        //    ActivityCompat#requestPermissions
+        // here to request the missing permissions, and then overriding
+        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+        //                                          int[] grantResults)
+        // to handle the case where the user grants the permission. See the documentation
+        // for ActivityCompat#requestPermissions for more details.
         if (checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -105,16 +112,7 @@ class MainActivity : ComponentActivity() {
                 this,
                 Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return
-        }
+        ) return
         fusedLocationClient.lastLocation.addOnSuccessListener { location ->
             if (location != null) {
                 val startPoint = GeoPoint(location.latitude, location.longitude)
