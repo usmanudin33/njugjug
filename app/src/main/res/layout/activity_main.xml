@@ -26,7 +26,7 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:text="Selamat datang"
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textSize="20sp" />
 
             <TextView
@@ -35,7 +35,7 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:text="Njugjug"
-                android:textAlignment="textEnd"
+                android:textAlignment="center"
                 android:textSize="24sp" />
         </LinearLayout>
 
@@ -44,14 +44,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="115dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/textA"
             android:layout_width="0dp"
             android:layout_height="100dp"
-            android:layout_weight="1"
             android:layout_margin="8dp"
+            android:layout_weight="1"
             android:background="@android:color/holo_blue_light"
             android:gravity="center"
             android:text="@string/a"
@@ -61,8 +62,8 @@
             android:id="@+id/textB"
             android:layout_width="0dp"
             android:layout_height="100dp"
-            android:layout_weight="1"
             android:layout_margin="8dp"
+            android:layout_weight="1"
             android:background="@android:color/holo_green_light"
             android:gravity="center"
             android:text="B"
@@ -74,7 +75,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/textC"
@@ -99,10 +101,68 @@
             android:textColor="#000000" />
 
     </LinearLayout>
+    <TextView
+    android:id="@+id/latitudeTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Latitude: "
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp" />
 
-    <Space
+    <TextView
+        android:id="@+id/longitudeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/latitudeTextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Longitude: " />
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="387dp" />
+        android:layout_height="285dp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <Button
+            android:id="@+id/buttonstartgps"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#08CF01"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/start"
+            android:textAlignment="center"
+            android:textColor="#4E342E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonstopgps"
+            app:layout_constraintHorizontal_bias="0.848"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/buttonstopgps"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:background="#F44336"
+            android:text="@string/stop"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.65"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavView"
@@ -110,6 +170,7 @@
         android:layout_height="56dp"
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
+        android:visibility="invisible"
         app:menu="@drawable/bottom_nav_menu" />
 
 </LinearLayout>

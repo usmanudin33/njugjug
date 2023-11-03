@@ -20,4 +20,6 @@
     <string name="input_bibit_baru">TANAM APA SEKARANG.?</string>
     <string name="jenis_bibit">Jenis Bibit</string>
     <string name="banyaknya_bibit_dalam_kg">Banyaknya Bibit dalam Kg</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
 </resources>
